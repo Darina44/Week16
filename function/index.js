@@ -9,10 +9,15 @@ document.addEventListener( 'keyup', sumInput => {
     input.value = '';
     }});
 
+let button = document.getElementById("done");
+
+button.onclick = function () {
+    nums.sort((a, b) => a - b);
+    alert(nums);
+}
+
 
 // let resultsum = document.getElementById("resultsum");
 // let resultsort = document.getElementById("resultsort");
-
-// let sortedNums = nums.sort;
 
 // resultsum = "sum";
