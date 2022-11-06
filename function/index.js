@@ -1,11 +1,11 @@
 const input = document.querySelector('input');
 const resultsort = document.getElementById('resultsort');
+const resultsum = document.getElementById('resultsum');
 
 let nums = [];
 
-document.addEventListener( 'keyup', sumInput => {
-    if( event.code === 'Enter' ) {
-    console.log('enter was pressed');
+input.addEventListener( 'change', () => {
+    if(input.value !== '' && !/[^0-9\.]/g.test(input.value)) {
     let number = input.value;
     nums.push(+number);
     input.value = '';
@@ -14,6 +14,7 @@ document.addEventListener( 'keyup', sumInput => {
 let button = document.getElementById("done");
 
 button.onclick = function () {
+    
     nums.sort((a, b) => a - b);
     resultsort.innerText = `Массив: ${nums}`;
 
