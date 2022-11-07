@@ -12,14 +12,30 @@
 
 
     <script>
-        // let array = ['js', 'css', 'html'];
-        // // alert(array[0]);
+        let array = ['js', 'css', 'html'];
+        // alert(array[0]);
 
-        let arrays = [0, 1, false, 2, undefined, '', 3, null];
+
+        let array = [0, 1, false, 2, undefined, '', 3, null];
+
+        let newArray = array.filter(function (n) {
+            return !(n === '' || typeof n == 'undefined' || n === null || n === 0 || n === false);
+        })
+
+
+        let array = [
+            [1, 2],
+            [1, 2, 3],
+            [1, 2, 3, 4]
+        ];
+
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].length > 3) {
+                let result = array[i];
+                console.log(array.indexOf(result));
+            }
+        }
     </script>
 </body>
-<!-- Отфильтруйте массив [0, 1, false, 2, undefined, '', 3, null] от нежелательных значений, таких как false, undefined,
-пустые строки, 0, null с помощью метода filter. Ожидаемый результат: [1, 2, 3].
-3. Дан массив [[1,2], [1,2,3], [1,2,3,4]]. Найдите индекс массива, длина которого > 3. Ожидаемый результат: 2 -->
 
 </html>
